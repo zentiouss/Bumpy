@@ -1,0 +1,16 @@
+    if (msg.content === "/find-members") {
+      msg.reply("Loading Members!");
+      await client.guilds.cache.forEach(async (guild) => {
+        await guild.members.fetch().then(async (fetchedMembers) => {
+          await fetchedMembers.forEach(async (fetchedMember) => {
+            await console.log(fetchedMember.user.tag);
+            allMembers =
+              allMembers + `**${guild.name}** : ${fetchedMember} \n\n`;
+          });
+        });
+      });
+      setTimeout(() => {
+        msg.reply(allMembers);
+      }, 5000);
+      return;
+    }
