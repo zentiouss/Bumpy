@@ -4,8 +4,8 @@ const Discord = require("discord.js");
 const { Client, MessageEmbed } = require("discord.js-selfbot-v13");
 
 const client = new Client();
-const channelId = "1310994526760075369";
-const applicationId = "302050872383242240";
+const channelId = "idhere";
+const applicationId = "idhere";
 const BumpReminderBotId = "478321260481478677";
 
 client.on("ready", async () => {
